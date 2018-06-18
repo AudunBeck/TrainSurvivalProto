@@ -161,7 +161,7 @@ void APlayerChar::OnOverlap(UPrimitiveComponent * OverlappedComponent, AActor * 
 		onPlayer = true;
 	}
 
-	if (OtherActor->IsA(AAlien::StaticClass()))
+	if (OtherActor->IsA(AAlien::StaticClass()) && (!holdingSomething || whatItem == 1))
 	{
 		punchableFace = Cast<AAlien>(OtherActor);
 	}
@@ -181,7 +181,7 @@ void APlayerChar::EndOnOverlap(UPrimitiveComponent * OverlappedComp, AActor * Ot
 		onPlayer = false;
 	}
 	
-	if (OtherActor->IsA(AAlien::StaticClass()))
+	if (OtherActor->IsA(AAlien::StaticClass()) && !holdingSomething)
 	{
 		punchableFace = nullptr;
 	}

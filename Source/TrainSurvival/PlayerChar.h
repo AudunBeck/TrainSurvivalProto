@@ -61,6 +61,7 @@ public:
 
 		bool onPlayer = false;
 
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category=AnimationVariables)
 		bool holdingSomething = false;
 
 
