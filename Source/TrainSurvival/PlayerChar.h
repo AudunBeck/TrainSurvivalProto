@@ -65,7 +65,7 @@ public:
 		bool holdingSomething = false;
 
 
-	UPROPERTY(EditAnywhere)
+	UPROPERTY(EditAnywhere, BluePrintReadOnly, Category=AnimationVariables)
 		bool isPickedUp = false;
 
 	UPROPERTY(VisibleAnywhere)
